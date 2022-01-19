@@ -1,0 +1,22 @@
+article.averagesession {
+  width: max-content;
+  position: relative;
+}
+
+article.averagesession figure {
+  background-color: #ff0000;
+  border-radius: 5px;
+  margin: 0px;
+  width: max-content;
+}
+
+h2 {
+  position: absolute;
+  color: white;
+  top: 30px;
+  left: 34px;
+  font-size: 15px;
+  font-weight: 500;
+  width: 147px;
+  opacity: 0.6;
+}

@@ -1,0 +1,36 @@
+nav.navigationLeft {
+  height: 90vh;
+  width: 117px;
+}
+
+nav.navigationLeft ul {
+  list-style: none;
+  background-color: #020203;
+  margin: 0px;
+  padding: 100px 0px 0px 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+nav.navigationLeft ul li {
+  margin-bottom: 20px;
+}
+
+nav.navigationLeft ul li figure {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav.navigationLeft p {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  bottom: 60px;
+  color: white;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  margin: 0px 0px 0px 52px;
+}

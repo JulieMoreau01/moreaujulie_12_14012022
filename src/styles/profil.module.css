@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+section.profil {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  padding: 65px 100px;
+}
+
+section.profil h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0px 0px 40px 0px;
+}
+
+section.profil p {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 400;
+}
