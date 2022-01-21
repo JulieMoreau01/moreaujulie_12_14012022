@@ -7,13 +7,11 @@ import Activity from '../components/charts/Activity'
 import Performance from '../components/charts/Performance'
 import Score from '../components/charts/score'
 import KeyCards from '../components/KeyCards'
-import {
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_MAIN_DATA,
-  USER_PERFORMANCE,
-} from '../datas/dataMock'
-
+import { USER_MAIN_DATA } from '../datas/dataMock'
+/**
+ * PROFIL PAGE
+ * @returns <section>
+ */
 function Profil() {
   const { id } = useParams()
   const idNum = parseInt(id, 10)

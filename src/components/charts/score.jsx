@@ -10,6 +10,11 @@ import {
 import { USER_MAIN_DATA } from '../../datas/dataMock'
 import styles from '../../styles/score.module.css'
 
+/**
+ * Component - RadialChart Graph of todayScrore
+ * @param {number} props.user index of USER_MAIN_DATA= id
+ * @returns <article> with RadialBarChart Graph
+ */
 function Score(props) {
   const user = props.user
   const score = [{ value: USER_MAIN_DATA[user].todayScore * 100 }]

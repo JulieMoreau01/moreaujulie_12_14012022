@@ -6,8 +6,7 @@ import icon4 from '../assets/navlicon4.svg'
 import styles from '../styles/navigationLeft.module.css'
 
 /**
- * Display Navigation Left
- * @component
+ * Component - Display Navigation Left
  * @returns <nav>
  */
 function NavigationLeft() {

@@ -11,6 +11,11 @@ import {
 import { USER_AVERAGE_SESSIONS } from '../../datas/dataMock'
 import styles from '../../styles/averageSessions.module.css'
 
+/**
+ * Component - LineChart Graph of session Longer
+ * @param {number} props.user index of USER_AVERAGE_SESSIONS= id
+ * @returns <article> with LineChart Graph
+ */
 function AverageSessions(props) {
   const user = props.user
   const dataSession = USER_AVERAGE_SESSIONS[user].sessions

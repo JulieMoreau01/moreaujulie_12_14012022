@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+/**
+ * HOME PAGE
+ * @returns <section>
+ */
 function Accueil() {
   return (
     <section>

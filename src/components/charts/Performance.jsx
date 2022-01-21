@@ -11,6 +11,11 @@ import {
 import { USER_PERFORMANCE } from '../../datas/dataMock'
 import styles from '../../styles/performance.module.css'
 
+/**
+ * Component - RadarChart Graph of performance
+ * @param {number} props.user index of USER_PERFORMANCE= id
+ * @returns <article> with RadarChart Graph
+ */
 function Performance(props) {
   const user = props.user
   const data = USER_PERFORMANCE[user].data

@@ -1,9 +1,8 @@
 import React from 'react'
 /**
- * DIsplay Welcome Title in Profil Page
- * @component
+ * Component Welcome Title in Profil Page
  * @param {string} props Name's user
- * @returns <h1> and <p>
+ * @returns <h1> <p>
  */
 function Title(props) {
   const name = props.name

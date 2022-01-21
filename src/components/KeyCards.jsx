@@ -6,6 +6,11 @@ import carbsicon from '../assets/carbs-icon.svg'
 import faticon from '../assets/fat-icon.svg'
 import proteinicon from '../assets/protein-icon.svg'
 
+/**
+ * Data Key card information
+ * @param {number} props.user
+ * @returns <section>
+ */
 function KeyCards(props) {
   const user = props.user
   const calories = USER_MAIN_DATA[user].keyData.calorieCount

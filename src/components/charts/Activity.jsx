@@ -12,6 +12,11 @@ import {
 import { USER_ACTIVITY } from '../../datas/dataMock'
 import styles from '../../styles/activity.module.css'
 
+/**
+ * Component - BarChart Graph of Daily activity
+ * @param {number} props.user index of USER_ACTIVITY = id
+ * @returns <article> with barchart Graph
+ */
 function Activity(props) {
   const user = props.user
   const dataSession = USER_ACTIVITY[user].sessions

@@ -4,12 +4,10 @@ import logo from '../assets/logo.svg'
 import '../styles/header.module.css'
 
 /**
- * Display Header
- * @component
- * @returns Header
- * @param {logo}
+ * Component - Header
+ * @param {logo} SportSeeLogo
+ * @returns <Header> <img> <nav>
  */
-
 function Header() {
   return (
     <header>
