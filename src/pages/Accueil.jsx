@@ -6,16 +6,16 @@ function Accueil() {
     <section>
       <ul>
         <li>
-          <Link to="profil/18"> KARL MOCK</Link>
+          <Link to="profil/18?mock"> USER 18 MOCK</Link>
         </li>
         <li>
-          <Link to="profil/12"> GIRL MOCK</Link>
+          <Link to="profil/12?mock"> USER 12 MOCK</Link>
         </li>
         <li>
-          <Link to="profil/18"> KARL API</Link>
+          <Link to="profil/18?api"> USER 18 API</Link>
         </li>
         <li>
-          <Link to="profil/12"> GIRL API</Link>
+          <Link to="profil/12?api"> USER 12 API</Link>
         </li>
       </ul>
     </section>

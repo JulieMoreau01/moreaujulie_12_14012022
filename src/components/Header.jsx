@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import '../styles/header.module.css'
 
+/**
+ * Display Header
+ * @component
+ * @returns Header
+ * @param {logo}
+ */
+
 function Header() {
   return (
     <header>

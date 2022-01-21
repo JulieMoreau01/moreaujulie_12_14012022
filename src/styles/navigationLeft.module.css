@@ -1,6 +1,7 @@
 nav.navigationLeft {
   height: 90vh;
   width: 117px;
+  margin-right: 100px;
 }
 
 nav.navigationLeft ul {

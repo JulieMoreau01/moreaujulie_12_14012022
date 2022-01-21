@@ -1,0 +1,23 @@
+article.activity {
+  width: max-content;
+  position: relative;
+  margin-bottom: 30px;
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+article.activity figure {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  margin: 0px;
+  width: 835px;
+  height: 320px;
+}
+
+article.activity h2 {
+  position: absolute;
+  color: #20253a;
+  top: 24px;
+  left: 32px;
+  font-size: 15px;
+  font-weight: 500;
+}

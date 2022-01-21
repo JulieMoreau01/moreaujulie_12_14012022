@@ -5,6 +5,11 @@ import icon3 from '../assets/navlicon3.svg'
 import icon4 from '../assets/navlicon4.svg'
 import styles from '../styles/navigationLeft.module.css'
 
+/**
+ * Display Navigation Left
+ * @component
+ * @returns <nav>
+ */
 function NavigationLeft() {
   return (
     <nav className={styles.navigationLeft}>

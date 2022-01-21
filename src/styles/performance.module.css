@@ -1,0 +1,14 @@
+article.performance {
+  width: max-content;
+  position: relative;
+  margin-right: 30px;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+article.performance figure {
+  background-color: #282d30;
+  border-radius: 5px;
+  margin: 0px;
+  width: 258px;
+  height: 263px;
+}

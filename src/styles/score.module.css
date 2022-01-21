@@ -1,25 +1,23 @@
-article.averagesession {
+article.score {
   width: max-content;
   position: relative;
   margin-right: 30px;
-  grid-area: 4 / 1 / 5 / 2;
+  grid-area: 4 / 3 / 5 / 4;
 }
 
-article.averagesession figure {
-  background-color: #ff0000;
+article.score figure {
+  background-color: #fbfbfb;
   border-radius: 5px;
   margin: 0px;
   width: 258px;
   height: 263px;
 }
 
-article.averagesession h2 {
+article.score h2 {
   position: absolute;
-  color: white;
-  top: 30px;
+  color: black;
+  top: 24px;
   left: 34px;
   font-size: 15px;
   font-weight: 500;
-  width: 147px;
-  opacity: 0.6;
 }
