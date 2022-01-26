@@ -1,38 +1,99 @@
-import React, { useEffect } from 'react'
+import React, { Component } from 'react'
 import Title from '../components/Title'
-import styles from '../styles/profil.module.css'
+import styles from '../styles/profil/profil.module.css'
 import { useParams } from 'react-router-dom'
 import AverageSessions from '../components/charts/AverageSessions'
 import Activity from '../components/charts/Activity'
 import Performance from '../components/charts/Performance'
 import Score from '../components/charts/score'
 import KeyCards from '../components/KeyCards'
-import { USER_MAIN_DATA } from '../datas/dataMock'
+import {
+  getUser,
+  getActivity,
+  getAverageSessions,
+  getPerformance,
+} from '../utils/service'
 /**
  * PROFIL PAGE
- * @returns <section>
+ * @returns {JSX}
  */
-function Profil() {
-  const { id } = useParams()
-  const idNum = parseInt(id, 10)
 
-  const user = USER_MAIN_DATA.findIndex(function (item) {
-    return idNum === item.id
-  })
+class Profil extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: {
+        userInfos: { firstName: null },
+        keyData: {
+          calorieCount: null,
+          proteinCount: null,
+          carbohydrateCount: null,
+          lipidCount: null,
+        },
+      },
+      userActivity: {
+        sessions: { day: null, kilogram: null, calories: null },
+      },
+      userAverageSessions: {
+        sessions: { day: null, sessionLength: null },
+      },
+      userPerformance: {
+        data: { value: null, kind: null },
+      },
+      error: null,
+    }
+  }
 
-  const name = USER_MAIN_DATA[user].userInfos.firstName
-  return (
-    <React.Fragment>
+  componentDidMount() {
+    const { id } = this.props.params
+    getUser(id).then((data) => {
+      this.setState({
+        user: {
+          userInfos: data.userInfos,
+          keyData: data.keyData,
+          score: data.score,
+        },
+      })
+    })
+    getActivity(id).then((data) => {
+      this.setState({
+        userActivity: {
+          sessions: data.sessions,
+        },
+      })
+    })
+    getAverageSessions(id).then((data) => {
+      this.setState({
+        userAverageSessions: {
+          sessions: data.sessions,
+        },
+      })
+    })
+    getPerformance(id)
+      .then((data) => {
+        this.setState({
+          userPerformance: {
+            data: data.data,
+          },
+        })
+      })
+      .catch((error) => {
+        this.setState({ error: error })
+      })
+  }
+
+  render() {
+    return (
       <section className={styles.profil}>
-        <Title name={name} />
-        <Activity user={user} />
-        <AverageSessions user={user} />
-        <Performance user={user} />
-        <Score user={user} />
-        <KeyCards user={user} />
+        <Title dataName={this.state.user.userInfos.firstName} />
+        <Activity sessions={this.state.userActivity.sessions} />
+        <AverageSessions sessions={this.state.userAverageSessions.sessions} />
+        <Performance data={this.state.userPerformance.data} />
+        <Score score={this.state.user.score} />
+        <KeyCards keyData={this.state.user.keyData} />
       </section>
-    </React.Fragment>
-  )
+    )
+  }
 }
 
-export default Profil
+export default (props) => <Profil {...props} params={useParams()} />

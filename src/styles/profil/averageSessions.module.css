@@ -1,16 +1,15 @@
 article.averagesession {
-  width: max-content;
   position: relative;
-  margin-right: 30px;
   grid-area: 4 / 1 / 5 / 2;
+  width: 100%;
 }
 
 article.averagesession figure {
   background-color: #ff0000;
   border-radius: 5px;
   margin: 0px;
-  width: 258px;
-  height: 263px;
+  width: 100%;
+  height: 100%;
 }
 
 article.averagesession h2 {

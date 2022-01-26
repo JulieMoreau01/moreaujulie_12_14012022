@@ -9,7 +9,7 @@ import {
   Legend,
 } from 'recharts'
 import { USER_PERFORMANCE } from '../../datas/dataMock'
-import styles from '../../styles/performance.module.css'
+import styles from '../../styles/profil/performance.module.css'
 
 /**
  * Component - RadarChart Graph of performance
@@ -17,12 +17,9 @@ import styles from '../../styles/performance.module.css'
  * @returns <article> with RadarChart Graph
  */
 function Performance(props) {
-  const user = props.user
-  const data = USER_PERFORMANCE[user].data
-  const dataKind = USER_PERFORMANCE[user].kind
-
-  console.log(data)
-  console.log(dataKind)
+  const data = props.data
+  // const data = USER_PERFORMANCE[user].data
+  // const dataKind = USER_PERFORMANCE[user].kind
 
   return (
     <article className={styles.performance}>

@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import { USER_AVERAGE_SESSIONS } from '../../datas/dataMock'
-import styles from '../../styles/averageSessions.module.css'
+import styles from '../../styles/profil/averageSessions.module.css'
 
 /**
  * Component - LineChart Graph of session Longer
@@ -17,8 +17,7 @@ import styles from '../../styles/averageSessions.module.css'
  * @returns <article> with LineChart Graph
  */
 function AverageSessions(props) {
-  const user = props.user
-  const dataSession = USER_AVERAGE_SESSIONS[user].sessions
+  const sessions = props.sessions
 
   return (
     <article className={styles.averagesession}>
@@ -26,7 +25,7 @@ function AverageSessions(props) {
       <figure>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            data={dataSession}
+            data={sessions}
             margin={{
               top: 0,
               right: 0,
@@ -47,12 +46,23 @@ function AverageSessions(props) {
               dataKey="day"
               tickLine={false}
               axisLine={false}
-              tick={{ fill: 'white', opacity: 0.8, AlignValue: 'right' }}
-              padding={{ left: 9, right: 10 }}
-              textAnchor="right"
+              tick={{ fill: 'white', opacity: 0, AlignValue: 'right' }}
+              padding={{ left: 0, right: 0 }}
+              //textAnchor="right"
             />
 
             <YAxis hide={true} domain={['dataMin-10', 'dataMax+50']} />
+            <text
+              x="25%"
+              y="95%"
+              textAnchor="middle"
+              fontSize="12"
+              fontWeight="700"
+              opacity="0.8"
+              fill="white"
+            >
+              L M M J V S D
+            </text>
             <Tooltip
               itemStyle={{
                 color: 'black',

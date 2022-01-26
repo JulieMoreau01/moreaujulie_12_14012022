@@ -1,6 +1,6 @@
 import React from 'react'
 import { USER_MAIN_DATA } from '../datas/dataMock'
-import styles from '../styles/keyCards.module.css'
+import styles from '../styles/profil/keyCards.module.css'
 import caloriesicon from '../assets/calories-icon.svg'
 import carbsicon from '../assets/carbs-icon.svg'
 import faticon from '../assets/fat-icon.svg'
@@ -8,15 +8,16 @@ import proteinicon from '../assets/protein-icon.svg'
 
 /**
  * Data Key card information
- * @param {number} props.user
- * @returns <section>
+ * @param {number} props.keyData
+ * @returns {JSX}
  */
 function KeyCards(props) {
-  const user = props.user
-  const calories = USER_MAIN_DATA[user].keyData.calorieCount
-  const proteines = USER_MAIN_DATA[user].keyData.proteinCount
-  const glucides = USER_MAIN_DATA[user].keyData.carbohydrateCount
-  const lipides = USER_MAIN_DATA[user].keyData.lipidCount
+  const keyData = props.keyData
+
+  const calories = keyData.calorieCount
+  const proteines = keyData.proteinCount
+  const glucides = keyData.carbohydrateCount
+  const lipides = keyData.lipidCount
 
   return (
     <section className={styles.keyCards}>

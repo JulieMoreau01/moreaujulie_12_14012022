@@ -10,16 +10,15 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import { USER_ACTIVITY } from '../../datas/dataMock'
-import styles from '../../styles/activity.module.css'
+import styles from '../../styles/profil/activity.module.css'
 
 /**
  * Component - BarChart Graph of Daily activity
- * @param {number} props.user index of USER_ACTIVITY = id
- * @returns <article> with barchart Graph
+ * @param {number} props.sessions
+ * @returns {JSX}
  */
 function Activity(props) {
-  const user = props.user
-  const dataSession = USER_ACTIVITY[user].sessions
+  const sessions = props.sessions
 
   const stylesLegend = { color: '#74798c', fontSize: '14px' }
   const legendValue = (value) => {
@@ -32,7 +31,7 @@ function Activity(props) {
       <figure>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
-            data={dataSession}
+            data={sessions}
             margin={{
               top: 35,
               right: 23,

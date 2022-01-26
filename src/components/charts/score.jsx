@@ -8,7 +8,7 @@ import {
   Label,
 } from 'recharts'
 import { USER_MAIN_DATA } from '../../datas/dataMock'
-import styles from '../../styles/score.module.css'
+import styles from '../../styles/profil/score.module.css'
 
 /**
  * Component - RadialChart Graph of todayScrore
@@ -16,8 +16,13 @@ import styles from '../../styles/score.module.css'
  * @returns <article> with RadialBarChart Graph
  */
 function Score(props) {
-  const user = props.user
-  const score = [{ value: USER_MAIN_DATA[user].todayScore * 100 }]
+  const score = props.score
+
+  const score1 = [{ value: score * 100 }]
+  const newScore = score * 100
+
+  // const score = [{ value: USER_MAIN_DATA[user].todayScore * 100 }]
+  // const newScore = USER_MAIN_DATA[user].todayScore * 100
 
   return (
     <article className={styles.score}>
@@ -25,7 +30,7 @@ function Score(props) {
       <figure>
         <ResponsiveContainer width="100%" height="100%">
           <RadialBarChart
-            data={score}
+            data={score1}
             innerRadius={80}
             barSize={10}
             startAngle={90}
@@ -42,7 +47,7 @@ function Score(props) {
               fontWeight="700"
               fill="black"
             >
-              12%
+              {newScore}%
             </text>
             <text
               x="50%"

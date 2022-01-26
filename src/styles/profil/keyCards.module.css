@@ -3,6 +3,7 @@ section.keyCards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 section.keyCards p {
@@ -11,6 +12,13 @@ section.keyCards p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+}
+
+@media all and (max-width: 1380px) {
+  section.keyCards p {
+    padding: 15px;
+  }
 }
 
 section.keyCards p img {

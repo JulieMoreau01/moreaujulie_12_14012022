@@ -1,7 +1,6 @@
 nav.navigationLeft {
   height: 90vh;
-  width: 117px;
-  margin-right: 100px;
+  width: 10%;
 }
 
 nav.navigationLeft ul {
@@ -23,6 +22,11 @@ nav.navigationLeft ul li {
 nav.navigationLeft ul li figure {
   margin: 0px;
   padding: 0px;
+}
+
+nav.navigationLeft ul li figure img {
+  width: 90%;
+  height: auto;
 }
 
 nav.navigationLeft p {
