@@ -7,7 +7,7 @@ import styles from '../styles/navigationLeft.module.css'
 
 /**
  * Component - Display Navigation Left
- * @returns <nav>
+ * @returns {JSX}
  */
 function NavigationLeft() {
   return (

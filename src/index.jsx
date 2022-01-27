@@ -15,7 +15,7 @@ ReactDOM.render(
       <Header />
       <NavigationLeft />
       <Routes>
-        <Route path="/Profil/:id" element={<Profil />} />
+        <Route path="/Profil/:id" element={<ProfilMock />} />
         <Route path="/" element={<Accueil />} />
         <Route path="*" element={<Error />} />
       </Routes>

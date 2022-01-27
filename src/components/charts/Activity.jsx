@@ -9,7 +9,7 @@ import {
   BarChart,
   ResponsiveContainer,
 } from 'recharts'
-import { USER_ACTIVITY } from '../../datas/dataMock'
+import PropTypes from 'prop-types'
 import styles from '../../styles/profil/activity.module.css'
 
 /**
@@ -101,6 +101,10 @@ function Activity(props) {
       </figure>
     </article>
   )
+}
+
+Activity.propTypes = {
+  sessions: PropTypes.array,
 }
 
 export default Activity

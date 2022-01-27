@@ -5,8 +5,8 @@ import '../styles/header.module.css'
 
 /**
  * Component - Header
- * @param {logo} SportSeeLogo
- * @returns <Header> <img> <nav>
+ * @param {logo} // SportSeeLogo
+ * @returns {JSX}
  */
 function Header() {
   return (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Title from '../components/Title'
 import styles from '../styles/profil/profil.module.css'
 import { useParams } from 'react-router-dom'

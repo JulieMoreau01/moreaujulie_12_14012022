@@ -22,3 +22,10 @@ article.averagesession h2 {
   width: 147px;
   opacity: 0.6;
 }
+
+@media all and (max-width: 1380px) {
+  article.averagesession h2 {
+    top: 10px;
+    left: 10px;
+  }
+}

@@ -3,12 +3,10 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   Radar,
   ResponsiveContainer,
-  Legend,
 } from 'recharts'
-import { USER_PERFORMANCE } from '../../datas/dataMock'
+import PropTypes from 'prop-types'
 import styles from '../../styles/profil/performance.module.css'
 
 /**
@@ -18,8 +16,6 @@ import styles from '../../styles/profil/performance.module.css'
  */
 function Performance(props) {
   const data = props.data
-  // const data = USER_PERFORMANCE[user].data
-  // const dataKind = USER_PERFORMANCE[user].kind
 
   return (
     <article className={styles.performance}>
@@ -51,6 +47,10 @@ function Performance(props) {
       </figure>
     </article>
   )
+}
+
+Performance.propTypes = {
+  data: PropTypes.array,
 }
 
 export default Performance

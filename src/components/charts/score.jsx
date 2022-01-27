@@ -3,26 +3,21 @@ import {
   RadialBarChart,
   RadialBar,
   ResponsiveContainer,
-  Legend,
   PolarAngleAxis,
-  Label,
 } from 'recharts'
-import { USER_MAIN_DATA } from '../../datas/dataMock'
+import PropTypes from 'prop-types'
 import styles from '../../styles/profil/score.module.css'
 
 /**
  * Component - RadialChart Graph of todayScrore
  * @param {number} props.user index of USER_MAIN_DATA= id
- * @returns <article> with RadialBarChart Graph
+ * @returns {JSX}
  */
 function Score(props) {
   const score = props.score
 
-  const score1 = [{ value: score * 100 }]
+  const scoreValue = [{ value: score * 100 }]
   const newScore = score * 100
-
-  // const score = [{ value: USER_MAIN_DATA[user].todayScore * 100 }]
-  // const newScore = USER_MAIN_DATA[user].todayScore * 100
 
   return (
     <article className={styles.score}>
@@ -30,7 +25,7 @@ function Score(props) {
       <figure>
         <ResponsiveContainer width="100%" height="100%">
           <RadialBarChart
-            data={score1}
+            data={scoreValue}
             innerRadius={80}
             barSize={10}
             startAngle={90}
@@ -64,6 +59,10 @@ function Score(props) {
       </figure>
     </article>
   )
+}
+
+Score.propTypes = {
+  score: PropTypes.number,
 }
 
 export default Score

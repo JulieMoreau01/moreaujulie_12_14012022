@@ -1,5 +1,5 @@
 import React from 'react'
-import { USER_MAIN_DATA } from '../datas/dataMock'
+import PropTypes from 'prop-types'
 import styles from '../styles/profil/keyCards.module.css'
 import caloriesicon from '../assets/calories-icon.svg'
 import carbsicon from '../assets/carbs-icon.svg'
@@ -51,6 +51,10 @@ function KeyCards(props) {
       </p>
     </section>
   )
+}
+
+KeyCards.propTypes = {
+  keyData: PropTypes.object,
 }
 
 export default KeyCards

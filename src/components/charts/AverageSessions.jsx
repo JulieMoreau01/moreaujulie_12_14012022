@@ -8,13 +8,13 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-import { USER_AVERAGE_SESSIONS } from '../../datas/dataMock'
+import PropTypes from 'prop-types'
 import styles from '../../styles/profil/averageSessions.module.css'
 
 /**
  * Component - LineChart Graph of session Longer
  * @param {number} props.user index of USER_AVERAGE_SESSIONS= id
- * @returns <article> with LineChart Graph
+ * @returns {JSX}
  */
 function AverageSessions(props) {
   const sessions = props.sessions
@@ -83,6 +83,10 @@ function AverageSessions(props) {
       </figure>
     </article>
   )
+}
+
+AverageSessions.propTypes = {
+  sessions: PropTypes.array,
 }
 
 export default AverageSessions
