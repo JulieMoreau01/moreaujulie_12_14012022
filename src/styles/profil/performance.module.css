@@ -12,3 +12,7 @@ article.performance figure {
   width: 100%;
   height: 100%;
 }
+
+article.performance .angleAxis {
+  margin-top: 25px;
+}

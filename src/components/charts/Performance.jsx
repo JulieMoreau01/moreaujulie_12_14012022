@@ -11,11 +11,24 @@ import styles from '../../styles/profil/performance.module.css'
 
 /**
  * Component - RadarChart Graph of performance
- * @param {number} props.user index of USER_PERFORMANCE= id
- * @returns <article> with RadarChart Graph
+ * @param {number} props.data
+ * @returns {JSX}
  */
 function Performance(props) {
   const data = props.data
+
+  const kindName = [
+    'Intensité',
+    'Vitesse',
+    'Force',
+    'Endurance',
+    'Energie',
+    'Cardio',
+  ]
+
+  for (let i = 0; i < 6; i++) {
+    data[i].kind = kindName[i]
+  }
 
   return (
     <article className={styles.performance}>
@@ -24,7 +37,7 @@ function Performance(props) {
           <RadarChart
             cx="50%"
             cy="50%"
-            outerRadius="80%"
+            outerRadius="65%"
             width={258}
             height={263}
             data={data}
@@ -33,7 +46,12 @@ function Performance(props) {
             <PolarAngleAxis
               dataKey="kind"
               tickSize={5}
-              tick={{ fill: 'white', fontSize: 12, fontWeight: 500 }}
+              tick={{
+                fill: 'white',
+                fontSize: 11,
+                fontWeight: 500,
+                y: 200,
+              }}
             />
             <Radar
               name="Mike"

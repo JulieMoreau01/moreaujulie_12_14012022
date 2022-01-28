@@ -19,6 +19,8 @@ import styles from '../../styles/profil/averageSessions.module.css'
 function AverageSessions(props) {
   const sessions = props.sessions
 
+  //console.log(typeof sessions)
+
   return (
     <article className={styles.averagesession}>
       <h2>Durée moyenne des sessions</h2>

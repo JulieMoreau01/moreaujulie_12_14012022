@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Title from '../components/Title'
 import styles from '../styles/profil/profil.module.css'
 import { useParams } from 'react-router-dom'
@@ -19,10 +18,18 @@ import {
  * @returns {JSX}
  */
 
+const Loading = () => (
+  <div className={styles.loading}>
+    <div></div>
+    <div></div>
+  </div>
+)
+
 class Profil extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      loading: true,
       user: {
         userInfos: { firstName: null },
         keyData: {
@@ -47,6 +54,9 @@ class Profil extends Component {
 
   componentDidMount() {
     const { id } = this.props.params
+    this.isLoading = setTimeout(() => {
+      this.setState({ loading: false })
+    }, 2300)
     getUser(id).then((data) => {
       this.setState({
         user: {
@@ -82,9 +92,20 @@ class Profil extends Component {
         this.setState({ error: error })
       })
   }
+  componentWillUnmount() {
+    clearTimeout(this.isLoading)
+  }
+
+  timer = () =>
+    setTimeout(() => {
+      this.setState({ loading: false })
+    }, 2300)
 
   render() {
-    return (
+    const { loading } = this.state
+    return loading ? (
+      <Loading />
+    ) : (
       <section className={styles.profil}>
         <Title dataName={this.state.user.userInfos.firstName} />
         <Activity sessions={this.state.userActivity.sessions} />
