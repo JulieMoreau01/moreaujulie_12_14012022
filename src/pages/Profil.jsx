@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navigate from 'react'
 import Title from '../components/Title'
 import styles from '../styles/profil/profil.module.css'
 import { useParams } from 'react-router-dom'
@@ -7,12 +8,13 @@ import Activity from '../components/charts/Activity'
 import Performance from '../components/charts/Performance'
 import Score from '../components/charts/score'
 import KeyCards from '../components/KeyCards'
+import Error from '../pages/Error'
 import {
   getUser,
   getActivity,
   getAverageSessions,
   getPerformance,
-} from '../utils/service'
+} from '../services/service'
 /**
  * PROFIL PAGE
  * @returns {JSX}
@@ -30,6 +32,7 @@ class Profil extends Component {
     super(props)
     this.state = {
       loading: true,
+      error: false,
       user: {
         userInfos: { firstName: null },
         keyData: {
@@ -49,7 +52,6 @@ class Profil extends Component {
       userPerformance: {
         data: { value: null, kind: null },
       },
-      error: null,
     }
   }
 
@@ -58,17 +60,23 @@ class Profil extends Component {
     this.isLoading = setTimeout(() => {
       this.setState({ loading: false })
     }, 2300)
-    getUser(id).then((data) => {
-      console.log(data)
-      this.setState({
-        user: {
-          userInfos: data.userInfos,
-          keyData: data.keyData,
-          todayScore: data.todayScore,
-          score: data.score,
-        },
+    getUser(id)
+      .then((data) => {
+        this.setState({
+          user: {
+            userInfos: data.userInfos,
+            keyData: data.keyData,
+            todayScore: data.todayScore,
+            score: data.score,
+          },
+        })
       })
-    })
+      .catch(() => {
+        console.log('error22')
+        this.setState({
+          error: true,
+        })
+      })
     getActivity(id).then((data) => {
       this.setState({
         userActivity: {
@@ -83,17 +91,13 @@ class Profil extends Component {
         },
       })
     })
-    getPerformance(id)
-      .then((data) => {
-        this.setState({
-          userPerformance: {
-            data: data.data,
-          },
-        })
+    getPerformance(id).then((data) => {
+      this.setState({
+        userPerformance: {
+          data: data.data,
+        },
       })
-      .catch((error) => {
-        this.setState({ error: error })
-      })
+    })
   }
   componentWillUnmount() {
     clearTimeout(this.isLoading)
@@ -106,19 +110,35 @@ class Profil extends Component {
 
   render() {
     const { loading } = this.state
-    return loading ? (
-      <Loading />
-    ) : (
-      <section className={styles.profil}>
-        <Title dataName={this.state.user.userInfos.firstName} />
-        <Activity sessions={this.state.userActivity.sessions} />
-        <AverageSessions sessions={this.state.userAverageSessions.sessions} />
-        <Performance data={this.state.userPerformance.data} />
-        <Score score={this.state.user.todayScore || this.state.user.score} />
-        <KeyCards keyData={this.state.user.keyData} />
-      </section>
+    const { error } = this.state
+    return (
+      <React.Fragment>
+        {(() => {
+          if (error) {
+            return <Error />
+          } else if (loading) {
+            return <Loading />
+          } else {
+            return (
+              <section className={styles.profil}>
+                <Title dataName={this.state.user.userInfos.firstName} />
+                <Activity sessions={this.state.userActivity.sessions} />
+                <AverageSessions
+                  sessions={this.state.userAverageSessions.sessions}
+                />
+                <Performance data={this.state.userPerformance.data} />
+                <Score
+                  score={this.state.user.todayScore || this.state.user.score}
+                />
+                <KeyCards keyData={this.state.user.keyData} />
+              </section>
+            )
+          }
+        })()}
+      </React.Fragment>
     )
   }
 }
 
 export default (props) => <Profil {...props} params={useParams()} />
+// errorRedirect ? <Navigate to="error" /> : 'lapin'

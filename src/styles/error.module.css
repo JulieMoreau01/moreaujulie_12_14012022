@@ -1,4 +1,15 @@
+section.error {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 section.error p {
-  font-size: 25px;
+  font-size: 50px;
   color: red;
+  font-weight: 900;
+  text-align: center;
 }

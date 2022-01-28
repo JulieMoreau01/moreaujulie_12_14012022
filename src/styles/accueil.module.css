@@ -3,7 +3,7 @@ section.accueil {
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 90vh;
+  width: 90%;
 }
 
 section.accueil ul {
@@ -16,9 +16,10 @@ section.accueil ul li {
 }
 
 section.accueil ul li a {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   padding: 20px;
+  font-weight: 700;
   background-color: black;
   color: white;
   display: flex;
