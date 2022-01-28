@@ -20,7 +20,7 @@ function Header() {
             <Link to="/">Accueil</Link>
           </li>
           <li>
-            <Link to="/Profil/:id">Profil</Link>
+            <Link to="/Profil/18">Profil</Link>
           </li>
           <li>
             <Link to="">Réglage</Link>

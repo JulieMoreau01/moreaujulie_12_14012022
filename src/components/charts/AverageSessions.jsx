@@ -19,8 +19,6 @@ import styles from '../../styles/profil/averageSessions.module.css'
 function AverageSessions(props) {
   const sessions = props.sessions
 
-  //console.log(typeof sessions)
-
   return (
     <article className={styles.averagesession}>
       <h2>Durée moyenne des sessions</h2>
@@ -48,13 +46,18 @@ function AverageSessions(props) {
               dataKey="day"
               tickLine={false}
               axisLine={false}
-              tick={{ fill: 'white', opacity: 0, AlignValue: 'right' }}
-              padding={{ left: 0, right: 0 }}
-              //textAnchor="right"
+              tick={{
+                fill: 'white',
+                opacity: 0.8,
+                AlignValue: 'right',
+              }}
+              padding={{ left: 10, right: 10 }}
+              interval={0}
+              width={80}
             />
 
             <YAxis hide={true} domain={['dataMin-10', 'dataMax+50']} />
-            <text
+            {/* <text
               x="25%"
               y="95%"
               textAnchor="middle"
@@ -64,7 +67,7 @@ function AverageSessions(props) {
               fill="white"
             >
               L M M J V S D
-            </text>
+            </text> */}
             <Tooltip
               itemStyle={{
                 color: 'black',

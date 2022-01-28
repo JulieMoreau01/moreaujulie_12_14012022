@@ -37,5 +37,10 @@ nav.navigationLeft p {
   color: white;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  margin: 0px 0px 0px 52px;
+  margin: 0px 0px 0px 0px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }

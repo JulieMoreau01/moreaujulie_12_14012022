@@ -1,0 +1,31 @@
+section.accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 90vh;
+}
+
+section.accueil ul {
+  display: flex;
+  list-style: none;
+}
+
+section.accueil ul li {
+  margin: 0px 10px;
+}
+
+section.accueil ul li a {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  border: 5px solid red;
+}

@@ -20,10 +20,6 @@ import styles from '../../styles/profil/activity.module.css'
 function Activity(props) {
   const sessions = props.sessions
 
-  console.log(sessions)
-
-  console.log(typeof sessions)
-
   const stylesLegend = { color: '#74798c', fontSize: '14px' }
   const legendValue = (value) => {
     return <span style={stylesLegend}>{value} </span>

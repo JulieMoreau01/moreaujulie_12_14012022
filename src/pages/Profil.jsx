@@ -38,6 +38,7 @@ class Profil extends Component {
           carbohydrateCount: null,
           lipidCount: null,
         },
+        todayScore: null,
       },
       userActivity: {
         sessions: { day: null, kilogram: null, calories: null },
@@ -58,10 +59,12 @@ class Profil extends Component {
       this.setState({ loading: false })
     }, 2300)
     getUser(id).then((data) => {
+      console.log(data)
       this.setState({
         user: {
           userInfos: data.userInfos,
           keyData: data.keyData,
+          todayScore: data.todayScore,
           score: data.score,
         },
       })
@@ -111,7 +114,7 @@ class Profil extends Component {
         <Activity sessions={this.state.userActivity.sessions} />
         <AverageSessions sessions={this.state.userAverageSessions.sessions} />
         <Performance data={this.state.userPerformance.data} />
-        <Score score={this.state.user.score} />
+        <Score score={this.state.user.todayScore || this.state.user.score} />
         <KeyCards keyData={this.state.user.keyData} />
       </section>
     )

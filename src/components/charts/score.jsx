@@ -16,8 +16,12 @@ import styles from '../../styles/profil/score.module.css'
 function Score(props) {
   const score = props.score
 
+  console.log(score)
+
   const scoreValue = [{ value: score * 100 }]
   const newScore = score * 100
+
+  console.log(newScore)
 
   return (
     <article className={styles.score}>
