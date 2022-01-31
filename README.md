@@ -1,3 +1,7 @@
+# SPORTSEE
+
+OPENCLASSROOMS Project 12 : Build an analytics dashboard with React
+
 ![SportSee](https://raw.githubusercontent.com/JulieMoreau01/moreaujulie_12_14012022/main/src/assets/readme.png)
 
 # DEPENDENCIES
@@ -5,11 +9,11 @@
 - Yarn [v1.22.5](https://yarnpkg.com/).
 - React [v17.0.2 ](https://fr.reactjs.org/).
 - Recharts [v2.1.8"](https://recharts.org/en-US).
-  `$ npm install recharts`
+  `npm install recharts`
 - React Router [v6.2.1](https://reactrouter.com/).
-  `$ yarn add react-router-dom`
+  `yarn add react-router-dom`
 - Prop-Types [v15.8.1](https://fr.reactjs.org/docs/typechecking-with-proptypes.html).
-  `$ yarn add prop-types`
+  `yarn add prop-types`
 - Text editor: [Visual Studio Code](https://code.visualstudio.com/).
 
 This project was bootstrapped with [Creat React App](https://create-react-app.dev/).
@@ -24,8 +28,8 @@ The API was bootstrapped without Docker.
 
 - Fork the repository
 - Clone it on your computer.
-- The yarn command will allow you to install the dependencies.
-- The yarn dev command will allow you to run the micro API.
+- The `yarn` command will allow you to install the dependencies.
+- The `yarn dev` command will allow you to run the micro API.
 
 ## Endpoints
 
@@ -48,12 +52,13 @@ MOCK UP : [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sp
 # INSTALLATION
 
 - Create a new file folder
-  `$ git init`
+  `git init`
 
 - Clone The repository
-  `$ git clone https://github.com/JulieMoreau01/moreaujulie_12_14012022.git`
+  `git clone https://github.com/JulieMoreau01/moreaujulie_12_14012022.git`
 
 - Lunch the projetct
-  `$ yarn start`
+  `yarn start`
 
 - The project was develop with ESLINT and PRETTIER
+  `yarn add -D prettier`
