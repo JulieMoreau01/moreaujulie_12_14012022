@@ -1,3 +1,15 @@
+# Dependencies
+
+- Creat React App
+- Recharts
+- React Router
+- Prop-Types
+
+# API Front-end Dashboard
+
+This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
+[API](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,6 +56,11 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## STYLE
+
+Typographie : [Google Font](https://fonts.google.com/specimen/Roboto?query=Roboto).
+CSS : [CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) : this feature is available with react-scripts@2.0.0 and higher.
 
 ### Code Splitting
 
