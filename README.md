@@ -1,18 +1,39 @@
+![SportSee](https://github.com/moreaujulie_12_14012022/src/assets/readme.png?raw=true)
+
 # Dependencies
 
-- Creat React App
-- Recharts
-- React Router
-- Prop-Types
+- React [v 17.0.2 ](https://fr.reactjs.org/).
+- Recharts [v 2.1.8"](https://recharts.org/en-US).
+  `$ npm install recharts`
+- React Router [v 6.2.1](https://reactrouter.com/).
+  `$ yarn add react-router-dom`
+- Prop-Types [15.8.1](https://fr.reactjs.org/docs/typechecking-with-proptypes.html).
+  `$ yarn add prop-types`
+- Text editor: [Visual Studio Code](https://code.visualstudio.com/).
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Creat React App](https://create-react-app.dev/).
+
+[Create React App](https://github.com/facebook/create-react-app).
 
 # API Front-end Dashboard
 
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
 [API](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
-# Getting Started with Create React App
+The API was bootstrapped without Docker.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Fork the repository
+- Clone it on your computer.
+- The yarn command will allow you to install the dependencies.
+- The yarn dev command will allow you to run the micro API.
+
+## STYLE
+
+Typographie : [Google Font](https://fonts.google.com/specimen/Roboto?query=Roboto).
+
+CSS : [CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) : this feature is available with react-scripts@2.0.0 and higher.
 
 ## Available Scripts
 
@@ -56,11 +77,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-## STYLE
-
-Typographie : [Google Font](https://fonts.google.com/specimen/Roboto?query=Roboto).
-CSS : [CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) : this feature is available with react-scripts@2.0.0 and higher.
 
 ### Code Splitting
 
