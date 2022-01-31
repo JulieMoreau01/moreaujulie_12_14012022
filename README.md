@@ -1,4 +1,4 @@
-![SportSee](https://github.com/moreaujulie_12_14012022/src/assets/readme.png?raw=true)
+![SportSee](https://raw.githubusercontent.com/JulieMoreau01/moreaujulie_12_14012022/main/src/assets/readme.png)
 
 # DEPENDENCIES
 
@@ -17,7 +17,8 @@ This project was bootstrapped with [Creat React App](https://create-react-app.de
 # API Front-end Dashboard
 
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
-[API](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
+
+[API INSTALLATION](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
 The API was bootstrapped without Docker.
 
@@ -29,21 +30,24 @@ The API was bootstrapped without Docker.
 ## Endpoints
 
 User Information : http://localhost:3000/user/18
+
 User Activity : http://localhost:3000/user/18}/activity
+
 User Performance : http://localhost:3000/user/18/performance
+
 Average Sessions : http://localhost:3000/user/18/average-sessions
 
 # STYLE
 
-Typographie : [Google Font](https://fonts.google.com/specimen/Roboto?query=Roboto).
+ROBOTO FONT : [Google Font](https://fonts.google.com/specimen/Roboto?query=Roboto).
 
 CSS : [CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) : this feature is available with react-scripts@2.0.0 and higher.
 
-[Figma Mock up](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
+MOCK UP : [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
 
 # INSTALLATION
 
-- create a new file folder
+- Create a new file folder
   `$ git init`
 
 - Clone The repository
