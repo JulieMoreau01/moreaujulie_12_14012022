@@ -1,21 +1,18 @@
 ![SportSee](https://github.com/moreaujulie_12_14012022/src/assets/readme.png?raw=true)
 
-# Dependencies
+# DEPENDENCIES
 
-- React [v 17.0.2 ](https://fr.reactjs.org/).
-- Recharts [v 2.1.8"](https://recharts.org/en-US).
+- Yarn [v1.22.5](https://yarnpkg.com/).
+- React [v17.0.2 ](https://fr.reactjs.org/).
+- Recharts [v2.1.8"](https://recharts.org/en-US).
   `$ npm install recharts`
-- React Router [v 6.2.1](https://reactrouter.com/).
+- React Router [v6.2.1](https://reactrouter.com/).
   `$ yarn add react-router-dom`
-- Prop-Types [15.8.1](https://fr.reactjs.org/docs/typechecking-with-proptypes.html).
+- Prop-Types [v15.8.1](https://fr.reactjs.org/docs/typechecking-with-proptypes.html).
   `$ yarn add prop-types`
 - Text editor: [Visual Studio Code](https://code.visualstudio.com/).
 
-# Getting Started with Create React App
-
 This project was bootstrapped with [Creat React App](https://create-react-app.dev/).
-
-[Create React App](https://github.com/facebook/create-react-app).
 
 # API Front-end Dashboard
 
@@ -29,75 +26,30 @@ The API was bootstrapped without Docker.
 - The yarn command will allow you to install the dependencies.
 - The yarn dev command will allow you to run the micro API.
 
-## STYLE
+## Endpoints
+
+User Information : http://localhost:3000/user/18
+User Activity : http://localhost:3000/user/18}/activity
+User Performance : http://localhost:3000/user/18/performance
+Average Sessions : http://localhost:3000/user/18/average-sessions
+
+# STYLE
 
 Typographie : [Google Font](https://fonts.google.com/specimen/Roboto?query=Roboto).
 
 CSS : [CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) : this feature is available with react-scripts@2.0.0 and higher.
 
-## Available Scripts
+[Figma Mock up](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
 
-In the project directory, you can run:
+# INSTALLATION
 
-### `npm start`
+- create a new file folder
+  `$ git init`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone The repository
+  `$ git clone https://github.com/JulieMoreau01/moreaujulie_12_14012022.git`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Lunch the projetct
+  `$ yarn start`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The project was develop with ESLINT and PRETTIER
