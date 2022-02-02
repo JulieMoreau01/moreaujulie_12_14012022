@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Title from '../components/Title'
 import styles from '../styles/profil/profil.module.css'
 import { useParams } from 'react-router-dom'
@@ -14,7 +14,7 @@ import {
   USER_PERFORMANCE,
 } from '../datas/dataMock'
 /**
- * PROFIL PAGE
+ * PROFIL PAGE MOCK
  * @returns {JSX}
  */
 function Profil() {
@@ -25,22 +25,22 @@ function Profil() {
     return idNum === item.id
   })
 
-  const name = USER_MAIN_DATA[user].userInfos.firstName
-  const dataSession = USER_ACTIVITY[user].sessions
-  const dataSessionAverage = USER_AVERAGE_SESSIONS[user].sessions
-  const performance = USER_PERFORMANCE[user].data
-  const score = USER_MAIN_DATA[user].todayScore
-  const keyData = USER_MAIN_DATA[user].keyData
+  const userFirstName = USER_MAIN_DATA[user].userInfos.firstName
+  const userActivity = USER_ACTIVITY[user].sessions
+  const userSessionAverage = USER_AVERAGE_SESSIONS[user].sessions
+  const userPerformance = USER_PERFORMANCE[user].data
+  const userScore = USER_MAIN_DATA[user].todayScore
+  const userKeyData = USER_MAIN_DATA[user].keyData
 
   return (
     <React.Fragment>
       <section className={styles.profil}>
-        <Title dataName={name} />
-        <Activity sessions={dataSession} />
-        <AverageSessions sessions={dataSessionAverage} />
-        <Performance data={performance} />
-        <Score score={score} />
-        <KeyCards keyData={keyData} />
+        <Title userFirstName={userFirstName} />
+        <Activity userActivity={userActivity} />
+        <AverageSessions userSessionAverage={userSessionAverage} />
+        <Performance userPerformance={userPerformance} />
+        <Score userScore={userScore} />
+        <KeyCards userKeyData={userKeyData} />
       </section>
     </React.Fragment>
   )

@@ -11,12 +11,14 @@ import styles from '../../styles/profil/performance.module.css'
 
 /**
  * Component - RadarChart Graph of performance
- * @param {number} props.data
+ * @param {number} props.userPerformance.value // Performance
+ * @param {number} props.userPerformance.kind // Label
  * @returns {JSX}
  */
 function Performance(props) {
-  const data = props.data
+  const userPerformance = props.userPerformance
 
+  // REPLACE NUMBER DATA BY GOOD LABEL
   const kindName = [
     'Intensité',
     'Vitesse',
@@ -25,9 +27,8 @@ function Performance(props) {
     'Energie',
     'Cardio',
   ]
-
   for (let i = 0; i < 6; i++) {
-    data[i].kind = kindName[i]
+    userPerformance[i].kind = kindName[i]
   }
 
   return (
@@ -40,7 +41,7 @@ function Performance(props) {
             outerRadius="65%"
             width={258}
             height={263}
-            data={data}
+            data={userPerformance}
           >
             <PolarGrid radialLines={false} />
             <PolarAngleAxis
@@ -68,7 +69,12 @@ function Performance(props) {
 }
 
 Performance.propTypes = {
-  data: PropTypes.array,
+  userPerformance: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number,
+      kind: PropTypes.number,
+    })
+  ).isRequired,
 }
 
 export default Performance

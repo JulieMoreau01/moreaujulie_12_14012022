@@ -23,3 +23,8 @@ article.activity h2 {
   font-size: 15px;
   font-weight: 500;
 }
+
+article.activity .legend {
+  color: #74798c;
+  font-size: 14px;
+}

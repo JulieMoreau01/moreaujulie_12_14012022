@@ -57,6 +57,8 @@ MOCK UP : [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sp
 - Clone The repository
   `git clone https://github.com/JulieMoreau01/moreaujulie_12_14012022.git`
 
+- The `yarn` command will allow you to install the dependencies.
+
 - Lunch the projetct
   `yarn start`
 

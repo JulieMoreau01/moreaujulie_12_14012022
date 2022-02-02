@@ -29,3 +29,13 @@ article.averagesession h2 {
     left: 10px;
   }
 }
+
+article.averagesession text {
+  word-spacing: 25px;
+}
+
+@media all and (max-width: 1380px) {
+  article.averagesession text {
+    word-spacing: 15px;
+  }
+}

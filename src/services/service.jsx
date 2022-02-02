@@ -1,5 +1,3 @@
-import Navigate from 'react'
-
 export async function getUser(urlId) {
   return fetch(`http://localhost:3000/user/` + urlId)
     .then((response) => response.json())
@@ -15,7 +13,6 @@ export async function getActivity(urlId) {
   return fetch(`http://localhost:3000/user/` + urlId + '/activity')
     .then((response) => response.json())
     .then((data) => {
-      console.log('ici')
       return data.data
     })
     .catch(function () {

@@ -10,19 +10,14 @@ import styles from '../../styles/profil/score.module.css'
 
 /**
  * Component - RadialChart Graph of todayScrore
- * @param {number} props.user index of USER_MAIN_DATA= id
+ * @param {number} props.userScore
  * @returns {JSX}
  */
 function Score(props) {
-  const score = props.score
+  const userScore = props.userScore
 
-  console.log(score)
-
-  const scoreValue = [{ value: score * 100 }]
-  const newScore = score * 100
-
-  console.log(newScore)
-
+  const scoreValue = [{ value: userScore * 100 }]
+  const newScore = userScore * 100
   return (
     <article className={styles.score}>
       <h2>Score</h2>
@@ -66,7 +61,7 @@ function Score(props) {
 }
 
 Score.propTypes = {
-  score: PropTypes.number,
+  userScore: PropTypes.number,
 }
 
 export default Score

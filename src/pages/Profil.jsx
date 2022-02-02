@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Navigate from 'react'
 import Title from '../components/Title'
 import styles from '../styles/profil/profil.module.css'
 import { useParams } from 'react-router-dom'
@@ -9,17 +8,13 @@ import Performance from '../components/charts/Performance'
 import Score from '../components/charts/score'
 import KeyCards from '../components/KeyCards'
 import Error from '../pages/Error'
-import {
-  getUser,
-  getActivity,
-  getAverageSessions,
-  getPerformance,
-} from '../services/service'
+import { getUser, getActivity, getAverageSessions, getPerformance } from '../services/service'
 /**
- * PROFIL PAGE
+ * PROFIL PAGE API
  * @returns {JSX}
  */
 
+// LOADING ANIMATION
 const Loading = () => (
   <div className={styles.loading}>
     <div></div>
@@ -72,7 +67,6 @@ class Profil extends Component {
         })
       })
       .catch(() => {
-        console.log('error22')
         this.setState({
           error: true,
         })
@@ -121,16 +115,12 @@ class Profil extends Component {
           } else {
             return (
               <section className={styles.profil}>
-                <Title dataName={this.state.user.userInfos.firstName} />
-                <Activity sessions={this.state.userActivity.sessions} />
-                <AverageSessions
-                  sessions={this.state.userAverageSessions.sessions}
-                />
-                <Performance data={this.state.userPerformance.data} />
-                <Score
-                  score={this.state.user.todayScore || this.state.user.score}
-                />
-                <KeyCards keyData={this.state.user.keyData} />
+                <Title userFirstName={this.state.user.userInfos.firstName} />
+                <Activity userActivity={this.state.userActivity.sessions} />
+                <AverageSessions userSessionAverage={this.state.userAverageSessions.sessions} />
+                <Performance userPerformance={this.state.userPerformance.data} />
+                <Score userScore={this.state.user.todayScore || this.state.user.score} />
+                <KeyCards userKeyData={this.state.user.keyData} />
               </section>
             )
           }
@@ -141,4 +131,3 @@ class Profil extends Component {
 }
 
 export default (props) => <Profil {...props} params={useParams()} />
-// errorRedirect ? <Navigate to="error" /> : 'lapin'

@@ -8,45 +8,42 @@ import proteinicon from '../assets/protein-icon.svg'
 
 /**
  * Data Key card information
- * @param {number} props.keyData
+ * @param {object} props.userKeyData
  * @returns {JSX}
  */
 function KeyCards(props) {
-  const keyData = props.keyData
+  const userKeyData = props.userKeyData
 
-  const calories = keyData.calorieCount
-  const proteines = keyData.proteinCount
-  const glucides = keyData.carbohydrateCount
-  const lipides = keyData.lipidCount
+  const calories = userKeyData.calorieCount
+  const proteines = userKeyData.proteinCount
+  const glucides = userKeyData.carbohydrateCount
+  const lipides = userKeyData.lipidCount
 
   return (
     <section className={styles.keyCards}>
       <p>
         <img src={caloriesicon} alt="icon calories" />
         <span className={styles.nb}>
-          {calories}
+          {calories} kCal
           <span className={styles.title}>Calories</span>
         </span>
       </p>
       <p>
         <img src={proteinicon} alt="icon Proteines" />
         <span className={styles.nb}>
-          {proteines}
-          <span className={styles.title}>Proteines</span>
+          {proteines} g<span className={styles.title}>Proteines</span>
         </span>
       </p>
       <p>
         <img src={carbsicon} alt="icon Glucides" />
         <span className={styles.nb}>
-          {glucides}
-          <span className={styles.title}>Glucides</span>
+          {glucides} g<span className={styles.title}>Glucides</span>
         </span>
       </p>
       <p>
         <img src={faticon} alt="icon Lipides" />
         <span className={styles.nb}>
-          {lipides}
-          <span className={styles.title}>Lipides</span>
+          {lipides} g<span className={styles.title}>Lipides</span>
         </span>
       </p>
     </section>
@@ -54,7 +51,7 @@ function KeyCards(props) {
 }
 
 KeyCards.propTypes = {
-  keyData: PropTypes.object,
+  userKeyData: PropTypes.object.isRequired,
 }
 
 export default KeyCards

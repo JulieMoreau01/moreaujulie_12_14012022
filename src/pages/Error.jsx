@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../styles/error.module.css'
 /**
  * ERROR PAGE
- * @returns <section>
+ * @returns {JSX}
  */
 function Error() {
   return (

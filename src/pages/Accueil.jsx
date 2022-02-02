@@ -4,7 +4,7 @@ import styles from '../styles/accueil.module.css'
 
 /**
  * HOME PAGE
- * @returns <section>
+ * @returns {JSX}
  */
 function Accueil() {
   return (

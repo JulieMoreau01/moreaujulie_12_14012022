@@ -32,6 +32,12 @@ section.keyCards p span.nb {
   flex-direction: column;
 }
 
+@media all and (max-width: 1380px) {
+  section.keyCards p span.nb {
+    font-size: 17px;
+  }
+}
+
 section.keyCards p span.title {
   color: #74798c;
   font-size: 14px;
