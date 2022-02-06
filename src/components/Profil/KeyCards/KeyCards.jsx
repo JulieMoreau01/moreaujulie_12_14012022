@@ -23,10 +23,10 @@ function KeyCards(props) {
 
   return (
     <section className={styles.keyCards}>
-      <KeyCardsBlock data={calories} name="Calories" icon={caloriesicon} />
-      <KeyCardsBlock data={proteines} name="Proteines" icon={proteinicon} />
-      <KeyCardsBlock data={glucides} name="Glucides" icon={carbsicon} />
-      <KeyCardsBlock data={lipides} name="Lipides" icon={faticon} />
+      <KeyCardsBlock data={calories} name="Calories" icon={caloriesicon} unit="kCal" />
+      <KeyCardsBlock data={proteines} name="Proteines" icon={proteinicon} unit="g" />
+      <KeyCardsBlock data={glucides} name="Glucides" icon={carbsicon} unit="g" />
+      <KeyCardsBlock data={lipides} name="Lipides" icon={faticon} unit="g" />
     </section>
   )
 }
