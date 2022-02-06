@@ -9,6 +9,7 @@ section.accueil {
 section.accueil ul {
   display: flex;
   list-style: none;
+  padding: 0px;
 }
 
 section.accueil ul li {

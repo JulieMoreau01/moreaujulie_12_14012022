@@ -28,25 +28,6 @@ class Profil extends Component {
     this.state = {
       loading: true,
       error: false,
-      user: {
-        userInfos: { firstName: null },
-        keyData: {
-          calorieCount: null,
-          proteinCount: null,
-          carbohydrateCount: null,
-          lipidCount: null,
-        },
-        todayScore: null,
-      },
-      userActivity: {
-        sessions: { day: null, kilogram: null, calories: null },
-      },
-      userAverageSessions: {
-        sessions: { day: null, sessionLength: null },
-      },
-      userPerformance: {
-        data: { value: null, kind: null },
-      },
     }
   }
 
@@ -58,45 +39,41 @@ class Profil extends Component {
     getUser(id)
       .then((data) => {
         this.setState({
-          user: {
-            userInfos: data.userInfos,
-            keyData: data.keyData,
-            todayScore: data.todayScore,
-            score: data.score,
-          },
+          userInfos: data.userInfos,
+          keyData: data.keyData,
+          todayScore: data.todayScore,
+          score: data.score,
         })
       })
       .catch(() => {
-        this.setState({
-          error: true,
-        })
+        this.setState({ error: true })
       })
-    getActivity(id).then((data) => {
-      this.setState({
-        userActivity: {
-          sessions: data.sessions,
-        },
+    getActivity(id)
+      .then((data) => {
+        this.setState({ userActivity: data.sessions })
       })
-    })
-    getAverageSessions(id).then((data) => {
-      this.setState({
-        userAverageSessions: {
-          sessions: data.sessions,
-        },
+      .catch(() => {
+        this.setState({ error: true })
       })
-    })
-    getPerformance(id).then((data) => {
-      this.setState({
-        userPerformance: {
-          data: data.data,
-        },
+    getAverageSessions(id)
+      .then((data) => {
+        this.setState({ userAverageSessions: data.sessions })
       })
-    })
+      .catch(() => {
+        this.setState({ error: true })
+      })
+    getPerformance(id)
+      .then((data) => {
+        this.setState({ userPerformance: data.data })
+      })
+      .catch(() => {
+        this.setState({ error: true })
+      })
   }
+
   componentWillUnmount() {
     clearTimeout(this.isLoading)
   }
-
   timer = () =>
     setTimeout(() => {
       this.setState({ loading: false })
@@ -115,12 +92,12 @@ class Profil extends Component {
           } else {
             return (
               <section className={styles.profil}>
-                <Title userFirstName={this.state.user.userInfos.firstName} />
-                <Activity userActivity={this.state.userActivity.sessions} />
-                <AverageSessions userSessionAverage={this.state.userAverageSessions.sessions} />
-                <Performance userPerformance={this.state.userPerformance.data} />
-                <Score userScore={this.state.user.todayScore || this.state.user.score} />
-                <KeyCards userKeyData={this.state.user.keyData} />
+                <Title userFirstName={this.state.userInfos.firstName} />
+                <Activity userActivity={this.state.userActivity} />
+                <AverageSessions userSessionAverage={this.state.userAverageSessions} />
+                <Performance userPerformance={this.state.userPerformance} />
+                <Score userScore={this.state.todayScore || this.state.score} />
+                <KeyCards userKeyData={this.state.keyData} />
               </section>
             )
           }

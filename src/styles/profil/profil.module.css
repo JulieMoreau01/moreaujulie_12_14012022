@@ -22,6 +22,8 @@ section.profil h1 {
   margin: 0px 0px 0px 0px;
   width: 100%;
   grid-area: 1 / 1 / 2 / 5;
+  display: flex;
+  align-items: flex-end;
 }
 
 @media all and (max-width: 1380px) {
@@ -31,6 +33,8 @@ section.profil h1 {
 }
 
 section.profil h1 span {
+  display: inline-block;
+  margin-left: 10px;
   color: #e60000;
 }
 
@@ -47,6 +51,7 @@ section.profil p {
     font-size: 13px;
   }
 }
+
 @keyframes bg {
   0% {
     background: #fff;

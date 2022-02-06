@@ -9,32 +9,12 @@ import styles from '../../styles/profil/averageSessions.module.css'
  * @param {number} props.userSessionAverage.sessionLength // Session Longer
  * @returns {JSX}
  */
+
 function AverageSessions(props) {
   const userSessionAverage = props.userSessionAverage
 
   // REPLACE NUMBER DAY BY GOOD LABEL
   const numberOfDay = ['L ', 'M ', 'M ', 'J ', 'V ', 'S ', 'D ']
-  for (let i = 0; i < userSessionAverage.length; i++) {
-    userSessionAverage[i].day = numberOfDay[i]
-  }
-
-  // const xasisDay = (value) => {
-  //   return <span className={styles.xasisDay}>te{value} </span>
-  // }
-
-  // console.log(userSessionAverage)
-
-  // function xasisDay(tickItem) {
-  //   // If using moment.js
-  //   return <span className={styles.xasisDay}>te{tickItem} </span>
-  // }
-
-  // const xasisDay = (tickItem) => {
-  //   console.log(typeof tickItem)
-  //   //return tickItem
-  //   return '   L M M J V S D    '
-  //   //return <span className={styles.xasisDay}>{tickItem.toString()} </span>
-  // }
 
   return (
     <article className={styles.averagesession}>
@@ -50,9 +30,9 @@ function AverageSessions(props) {
               bottom: 0,
             }}>
             <Line type="monotone" dataKey="sessionLength" stroke="white" dot={false} strokeWidth={2} unit=" min" />
+
             <CartesianGrid stroke="transparent" />
             <XAxis
-              // dataKey="day"
               tickLine={false}
               axisLine={false}
               tickMargin={40}
@@ -63,18 +43,13 @@ function AverageSessions(props) {
                 fontSize: 12,
               }}
               padding={{ left: 0, right: 0 }}
-              //tickFormatter={xasisDay}
-              //textAnchor="end"
-              //interval={0}
-              //dy={0}
-              //dx={10}
-              hide={false}
+              hide={true}
             />
+            <YAxis hide={true} domain={['dataMin-30', 'dataMax+50']} />
             <text x="50%" y="95%" textAnchor="middle" fontSize="12" fontWeight="500" fill="white" opacity="0.5">
-              {/* <span className={styles.xasisDay}>{numberOfDay}</span> */}
               {numberOfDay}
             </text>
-            <YAxis hide={true} domain={['dataMin-10', 'dataMax+50']} />
+
             <Tooltip
               itemStyle={{
                 color: 'black',
@@ -86,7 +61,7 @@ function AverageSessions(props) {
               cursor={{
                 stroke: 'black',
                 strokeOpacity: 0.1,
-                strokeWidth: 40,
+                strokeWidth: 60,
                 height: 263,
               }}
             />

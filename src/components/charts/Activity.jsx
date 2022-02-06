@@ -14,14 +14,14 @@ import styles from '../../styles/profil/activity.module.css'
 function Activity(props) {
   const userActivity = props.userActivity
 
-  const legendValue = (value) => {
-    return <span className={styles.legend}>{value} </span>
-  }
-
   // REPLACE NUMBER DAY BY GOOD LABEL
   const numberOfDay = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
   for (let i = 0; i < userActivity.length; i++) {
     userActivity[i].day = numberOfDay[i]
+  }
+
+  const legendValue = (value) => {
+    return <span className={styles.legend}>{value} </span>
   }
 
   return (
@@ -29,16 +29,11 @@ function Activity(props) {
       <h2>Activité quotidienne</h2>
       <figure>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={userActivity}
-            margin={{
-              top: 35,
-              right: 23,
-              left: 23,
-              bottom: 23,
-            }}>
+          <BarChart data={userActivity} margin={{ top: 35, right: 23, left: 23, bottom: 23 }}>
             <CartesianGrid strokeDasharray="2 2" stroke="#DEDEDE" horizontal={true} vertical={false} />
+
             <XAxis dataKey="day" tick={{ fill: '#9B9EAC', fontSize: '14', fontWeight: 500 }} tickLine={false} tickSize={16} stroke="#DEDEDE" />
+
             <YAxis
               yAxisId={0}
               dataKey="kilogram"
@@ -63,7 +58,9 @@ function Activity(props) {
                 backgroundColor: '#E60000',
               }}
             />
+
             <Legend layout="horizontal" verticalAlign="top" align="right" iconType="circle" iconSize={8} height={47} formatter={legendValue} />
+
             <Bar yAxisId={0} dataKey="kilogram" fill="#282D30" barSize={7} radius={[5, 5, 0, 0]} unit=" kg" name="Poids (kg)" />
             <Bar yAxisId={1} dataKey="calories" fill="#E60000" barSize={7} radius={[5, 5, 0, 0]} unit=" Kcal" name="Calories brûlées (kCal)" />
           </BarChart>

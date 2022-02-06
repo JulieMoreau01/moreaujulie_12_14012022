@@ -25,6 +25,12 @@ header figure img {
   height: auto;
 }
 
+@media all and (max-width: 1380px) {
+  header figure img {
+    width: 120px;
+  }
+}
+
 header nav {
   max-width: 1000px;
   flex: 1;
@@ -49,4 +55,10 @@ header ul li a {
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
+}
+
+@media all and (max-width: 1380px) {
+  header ul li a {
+    font-size: 17px;
+  }
 }
