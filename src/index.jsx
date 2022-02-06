@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import styles from '../src/styles/index.module.css'
+import '../src/styles/index.module.css'
 import Header from '../src/components/Header'
 import Profil from '../src/pages/Profil'
 import ProfilMock from '../src/pages/ProfilMock'
