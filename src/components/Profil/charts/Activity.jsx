@@ -1,7 +1,7 @@
 import React from 'react'
 import { Legend, CartesianGrid, XAxis, YAxis, Tooltip, Bar, BarChart, ResponsiveContainer } from 'recharts'
 import PropTypes from 'prop-types'
-import styles from '../../styles/profil/activity.module.css'
+import styles from '../../../styles/profil/activity.module.css'
 
 /**
  * Component - BarChart Graph of Daily activity

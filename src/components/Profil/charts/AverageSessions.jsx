@@ -1,7 +1,7 @@
 import React from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 import PropTypes from 'prop-types'
-import styles from '../../styles/profil/averageSessions.module.css'
+import styles from '../../../styles/profil/averageSessions.module.css'
 
 /**
  * Component - LineChart Graph of session Longer

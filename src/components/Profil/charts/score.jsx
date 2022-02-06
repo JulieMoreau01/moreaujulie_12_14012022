@@ -1,7 +1,7 @@
 import React from 'react'
 import { RadialBarChart, RadialBar, ResponsiveContainer, PolarAngleAxis } from 'recharts'
 import PropTypes from 'prop-types'
-import styles from '../../styles/profil/score.module.css'
+import styles from '../../../styles/profil/score.module.css'
 
 /**
  * Component - RadialChart Graph of todayScrore

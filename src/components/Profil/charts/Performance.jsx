@@ -1,7 +1,7 @@
 import React from 'react'
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from 'recharts'
 import PropTypes from 'prop-types'
-import styles from '../../styles/profil/performance.module.css'
+import styles from '../../../styles/profil/performance.module.css'
 
 /**
  * Component - RadarChart Graph of performance
