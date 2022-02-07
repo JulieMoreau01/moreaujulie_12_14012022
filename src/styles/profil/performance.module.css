@@ -5,6 +5,12 @@ article.performance {
   width: 100%;
 }
 
+@media all and (max-width: 900px) {
+  article.performance {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}
+
 article.performance figure {
   background-color: #282d30;
   border-radius: 5px;

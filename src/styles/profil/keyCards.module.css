@@ -6,6 +6,12 @@ section.keyCards {
   width: 100%;
 }
 
+@media all and (max-width: 900px) {
+  section.keyCards {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+}
+
 section.keyCards p {
   background-color: #fbfbfb;
   padding: 32px;
@@ -17,7 +23,7 @@ section.keyCards p {
 
 @media all and (max-width: 1380px) {
   section.keyCards p {
-    padding: 15px;
+    padding: 6px;
   }
 }
 

@@ -3,6 +3,12 @@ nav.navigationLeft {
   width: 10%;
 }
 
+@media all and (max-width: 900px) {
+  nav.navigationLeft {
+    display: none;
+  }
+}
+
 nav.navigationLeft ul {
   list-style: none;
   background-color: #020203;

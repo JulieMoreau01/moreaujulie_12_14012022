@@ -16,6 +16,25 @@ section.profil {
   }
 }
 
+@media all and (max-width: 900px) {
+  section.profil {
+    padding: 20px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  section.profil {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 2%;
+    grid-auto-rows: 100%;
+    grid-auto-columns: 100%;
+    height: none;
+    width: 100%;
+  }
+}
+
 section.profil h1 {
   font-size: 48px;
   font-weight: 500;
@@ -29,6 +48,12 @@ section.profil h1 {
 @media all and (max-width: 1380px) {
   section.profil h1 {
     font-size: 25px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  section.profil h1 {
+    grid-area: 1 / 1 / 2 / 2;
   }
 }
 
@@ -49,6 +74,12 @@ section.profil p {
 @media all and (max-width: 1380px) {
   section.profil p {
     font-size: 13px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  section.profil p {
+    grid-area: 2 / 1 / 3 / 2;
   }
 }
 

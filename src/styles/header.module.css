@@ -32,7 +32,7 @@ header figure img {
 }
 
 header nav {
-  max-width: 1000px;
+  max-width: 1140px;
   flex: 1;
 }
 
@@ -46,8 +46,20 @@ header ul {
   width: 100%;
 }
 
+@media all and (max-width: 900px) {
+  header ul {
+    padding: 0px 0px 0px 50px;
+  }
+}
+
 header ul li {
   margin-left: 15px;
+}
+
+@media all and (max-width: 900px) {
+  header ul li {
+    margin-left: 2px;
+  }
 }
 
 header ul li a {
@@ -60,5 +72,11 @@ header ul li a {
 @media all and (max-width: 1380px) {
   header ul li a {
     font-size: 17px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  header ul li a {
+    font-size: 10px;
   }
 }

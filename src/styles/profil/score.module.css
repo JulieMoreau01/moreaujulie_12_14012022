@@ -4,6 +4,12 @@ article.score {
   width: 100%;
 }
 
+@media all and (max-width: 900px) {
+  article.score {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+}
+
 article.score figure {
   background-color: #fbfbfb;
   border-radius: 5px;

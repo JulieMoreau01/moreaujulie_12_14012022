@@ -4,6 +4,12 @@ article.averagesession {
   width: 100%;
 }
 
+@media all and (max-width: 900px) {
+  article.averagesession {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+}
+
 article.averagesession figure {
   background-color: #ff0000;
   border-radius: 5px;
