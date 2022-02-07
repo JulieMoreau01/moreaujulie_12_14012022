@@ -19,7 +19,7 @@ function Score(props) {
       <h2>Score</h2>
       <figure>
         <ResponsiveContainer width="100%" height="100%">
-          <RadialBarChart data={scoreValue} innerRadius={80} barSize={10} startAngle={90} endAngle={450} fill={'#FF0000'}>
+          <RadialBarChart data={scoreValue} innerRadius={80} barSize={10} startAngle={80} endAngle={440} fill={'#FF0000'}>
             <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
             <RadialBar dataKey="value" cornerRadius={5} background />
             <text x="50%" y="45%" textAnchor="middle" fontSize="26" fontWeight="700" fill="black">

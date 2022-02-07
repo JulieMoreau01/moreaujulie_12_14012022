@@ -1,6 +1,15 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styles from '../../../styles/profil/keyCards.module.css'
-
-export default function KeyCardsBlock(props) {
+/**
+ * Component for Keycards
+ * @param {number} props.data
+ * @param {string} props.name
+ * @param {string} props.icon // url
+ * @param {string} props.unit
+ * @returns {JSX}
+ */
+function KeyCardsBlock(props) {
   const data = props.data
   const name = props.name
   const icon = props.icon
@@ -15,3 +24,12 @@ export default function KeyCardsBlock(props) {
     </p>
   )
 }
+
+KeyCardsBlock.propTypes = {
+  data: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  unit: PropTypes.string.isRequired,
+}
+
+export default KeyCardsBlock

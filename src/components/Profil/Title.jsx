@@ -11,7 +11,12 @@ function Title(props) {
       <h1>
         Bonjour <span>{props.userFirstName}</span>
       </h1>
-      <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+      <p>
+        Félicitation ! Vous avez explosé vos objectifs hier
+        <span role="img" aria-label="icon">
+          👏
+        </span>
+      </p>
     </React.Fragment>
   )
 }

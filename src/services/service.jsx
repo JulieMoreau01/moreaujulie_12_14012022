@@ -1,3 +1,8 @@
+/**
+ * SERVICES FOR API
+ * @returns {data}
+ */
+
 export async function getUser(urlId) {
   return fetch(`http://localhost:3000/user/` + urlId)
     .then((response) => response.json())

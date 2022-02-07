@@ -23,14 +23,14 @@ function Performance(props) {
     <article className={styles.performance}>
       <figure>
         <ResponsiveContainer width="100%" height="100%">
-          <RadarChart cx="50%" cy="50%" outerRadius="65%" width={258} height={263} data={userPerformance}>
+          <RadarChart data={userPerformance} cx="50%" cy="50%" outerRadius="65%">
             <PolarGrid radialLines={false} />
             <PolarAngleAxis
               dataKey="kind"
-              tickSize={5}
+              tickSize={10}
               tick={{
                 fill: 'white',
-                fontSize: 11,
+                fontSize: 10,
                 fontWeight: 500,
                 y: 200,
               }}
