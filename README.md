@@ -1,4 +1,4 @@
-# SPORTSEE
+# SportSee
 
 OPENCLASSROOMS Project 12 : Build an analytics dashboard with React
 
