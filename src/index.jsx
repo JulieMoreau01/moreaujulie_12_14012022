@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import '../src/styles/index.module.css'
 import Header from '../src/components/Header'
 import Profil from '../src/pages/Profil'
@@ -11,7 +11,7 @@ import NavigationLeft from '../src/components/NavigationLeft'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <NavigationLeft />
       <Routes>
@@ -20,7 +20,7 @@ ReactDOM.render(
         <Route path="/" element={<Accueil />} />
         <Route path="*" element={<Error />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 
   document.getElementById('root')
