@@ -4,6 +4,8 @@ OPENCLASSROOMS Project 12 : Build an analytics dashboard with React
 
 ![SportSee](https://raw.githubusercontent.com/JulieMoreau01/moreaujulie_12_14012022/main/src/assets/readme.png)
 
+[SportSee](https://juliemoreau01.github.io/moreaujulie_12_14012022/index)
+
 # DEPENDENCIES
 
 - Yarn [v1.22.5](https://yarnpkg.com/).

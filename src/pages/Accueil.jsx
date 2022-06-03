@@ -16,12 +16,12 @@ function Accueil() {
         <li>
           <Link to="profilMock/12"> USER 12 MOCK</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="profil/18"> USER 18 API</Link>
         </li>
         <li>
           <Link to="profil/12"> USER 12 API</Link>
-        </li>
+        </li> */}
       </ul>
     </section>
   )
