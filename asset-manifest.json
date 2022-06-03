@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/moreaujulie_12_14012022/static/css/main.5bce09cd.chunk.css",
-    "main.js": "/moreaujulie_12_14012022/static/js/main.8a7c95d1.chunk.js",
-    "main.js.map": "/moreaujulie_12_14012022/static/js/main.8a7c95d1.chunk.js.map",
+    "main.js": "/moreaujulie_12_14012022/static/js/main.c9561890.chunk.js",
+    "main.js.map": "/moreaujulie_12_14012022/static/js/main.c9561890.chunk.js.map",
     "runtime-main.js": "/moreaujulie_12_14012022/static/js/runtime-main.0bf0e679.js",
     "runtime-main.js.map": "/moreaujulie_12_14012022/static/js/runtime-main.0bf0e679.js.map",
-    "static/js/2.f16a855d.chunk.js": "/moreaujulie_12_14012022/static/js/2.f16a855d.chunk.js",
-    "static/js/2.f16a855d.chunk.js.map": "/moreaujulie_12_14012022/static/js/2.f16a855d.chunk.js.map",
+    "static/js/2.007f5530.chunk.js": "/moreaujulie_12_14012022/static/js/2.007f5530.chunk.js",
+    "static/js/2.007f5530.chunk.js.map": "/moreaujulie_12_14012022/static/js/2.007f5530.chunk.js.map",
     "index.html": "/moreaujulie_12_14012022/index.html",
-    "precache-manifest.5c456217d159ba46870a94154ee63817.js": "/moreaujulie_12_14012022/precache-manifest.5c456217d159ba46870a94154ee63817.js",
+    "precache-manifest.478b708cb38411b330b7fa1a9fa7a9e6.js": "/moreaujulie_12_14012022/precache-manifest.478b708cb38411b330b7fa1a9fa7a9e6.js",
     "service-worker.js": "/moreaujulie_12_14012022/service-worker.js",
     "static/css/main.5bce09cd.chunk.css.map": "/moreaujulie_12_14012022/static/css/main.5bce09cd.chunk.css.map",
-    "static/js/2.f16a855d.chunk.js.LICENSE.txt": "/moreaujulie_12_14012022/static/js/2.f16a855d.chunk.js.LICENSE.txt",
-    "static/js/main.8a7c95d1.chunk.js.LICENSE.txt": "/moreaujulie_12_14012022/static/js/main.8a7c95d1.chunk.js.LICENSE.txt",
+    "static/js/2.007f5530.chunk.js.LICENSE.txt": "/moreaujulie_12_14012022/static/js/2.007f5530.chunk.js.LICENSE.txt",
+    "static/js/main.c9561890.chunk.js.LICENSE.txt": "/moreaujulie_12_14012022/static/js/main.c9561890.chunk.js.LICENSE.txt",
     "static/media/calories-icon.svg": "/moreaujulie_12_14012022/static/media/calories-icon.fec6c310.svg",
     "static/media/carbs-icon.svg": "/moreaujulie_12_14012022/static/media/carbs-icon.b6097cee.svg",
     "static/media/fat-icon.svg": "/moreaujulie_12_14012022/static/media/fat-icon.6e4294b2.svg",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0bf0e679.js",
-    "static/js/2.f16a855d.chunk.js",
+    "static/js/2.007f5530.chunk.js",
     "static/css/main.5bce09cd.chunk.css",
-    "static/js/main.8a7c95d1.chunk.js"
+    "static/js/main.c9561890.chunk.js"
   ]
 }
